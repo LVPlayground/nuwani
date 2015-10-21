@@ -5,7 +5,7 @@
 
 namespace Nuwani;
 
-class BotManager extends Singleton implements ArrayAccess, Countable
+class BotManager extends Singleton implements \ArrayAccess, \Countable
 {
 	/**
 	 * Contains a list with all the bots loaded into the system. All bots

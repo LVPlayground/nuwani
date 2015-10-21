@@ -5,7 +5,7 @@
 
 namespace Nuwani;
 
-class Bot implements ArrayAccess
+class Bot implements \ArrayAccess
 {
 	/**
 	 * The socket property contains a class which handles all communication
@@ -67,7 +67,7 @@ class Bot implements ArrayAccess
 	{
 		$this -> m_pSocket  = new Socket ($this);
 		$this -> m_sNickname = $sName;
-		$this -> In = new stdClass;
+		$this -> In = new \stdClass;
 		
 		$this -> m_aBotInfo = array 
 		(
@@ -376,7 +376,7 @@ class Bot implements ArrayAccess
 			return true ;
 		}
 		
-		throw new InvalidArgumentException ('The network "' . $sNetwork . '" has not been defined.');
+		throw new \InvalidArgumentException ('The network "' . $sNetwork . '" has not been defined.');
 	}
 	
 	/**

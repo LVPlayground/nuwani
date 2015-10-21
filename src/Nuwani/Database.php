@@ -5,7 +5,7 @@
 
 namespace Nuwani;
 
-class Database extends MySQLi
+class Database extends \MySQLi
 {
 	/**
 	 * This property contains the instance of the active MySQLi instance.

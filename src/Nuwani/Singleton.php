@@ -57,7 +57,7 @@ abstract class Singleton
 	
 	public final function __clone ()
 	{
-		throw new Exception ('Cannot create a new instance of class "' . get_called_class () . '".');
+		throw new \Exception ('Cannot create a new instance of class "' . get_called_class () . '".');
 	}
 	
 	/**
@@ -70,6 +70,6 @@ abstract class Singleton
 	
 	public final function __wakeup ()
 	{
-		throw new Exception ('Cannot unserialize the class "' . get_called_class () . '".');
+		throw new \Exception ('Cannot unserialize the class "' . get_called_class () . '".');
 	}
 };

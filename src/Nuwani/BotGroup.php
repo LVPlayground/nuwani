@@ -5,7 +5,7 @@
 
 namespace Nuwani;
 
-class BotGroup implements ArrayAccess, SeekableIterator, Countable
+class BotGroup implements \ArrayAccess, \SeekableIterator, \Countable
 {
 	/**
 	 * Defines a list of all bots included in this group, to be used with

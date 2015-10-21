@@ -47,7 +47,7 @@ class Timer
 		
 		if (!is_callable ($aFunction))
 		{
-			throw new Exception ('Could not create the timer due to the function not being callable.');
+			throw new \Exception ('Could not create the timer due to the function not being callable.');
 			return false ;
 		}
 		
@@ -102,7 +102,7 @@ class Timer
 				{
 					call_user_func ($aTimerInfo ['Function']);
 				}
-				catch (Exception $pException)
+				catch (\Exception $pException)
 				{
 					ErrorExceptionHandler :: getInstance () -> processException ($pException);
 					@ ob_end_flush ();
@@ -167,7 +167,7 @@ class Timer
 			{
 				if (!isset ($aTimerInfo [$sOption]))
 				{
-					throw new Exception ('There is no option "' . $sOption . '" for timers.');
+					throw new \Exception ('There is no option "' . $sOption . '" for timers.');
 					return false ;
 				}
 				
@@ -175,7 +175,7 @@ class Timer
 			}
 		}
 		
-		throw new Exception ('No timer could be found with the ID "' . $sTimerId . '".');
+		throw new \Exception ('No timer could be found with the ID "' . $sTimerId . '".');
 		return false ;
 	}
 	
@@ -198,7 +198,7 @@ class Timer
 			{
 				if (!isset ($aTimerInfo [$sOption]))
 				{
-					throw new Exception ('There is no option "' . $sOption . '" for timers.');
+					throw new \Exception ('There is no option "' . $sOption . '" for timers.');
 					return false ;
 				}
 				
@@ -207,7 +207,7 @@ class Timer
 			}
 		}
 		
-		throw new Exception ('No timer could be found with the ID "' . $sTimerId . '".');
+		throw new \Exception ('No timer could be found with the ID "' . $sTimerId . '".');
 		return false ;
 	}
 

@@ -5,7 +5,7 @@
 
 namespace Nuwani;
 
-class ModuleManager extends Singleton implements ArrayAccess, SeekableIterator, Countable
+class ModuleManager extends Singleton implements \ArrayAccess, \SeekableIterator, \Countable
 {
 	/**
 	 * This constant can be returned by callback functions in modules, which
@@ -93,7 +93,7 @@ class ModuleManager extends Singleton implements ArrayAccess, SeekableIterator, 
 				'Started' => time (),
 				'Methods' => array ()
 			);
-		} catch (Exception $pException) {
+		} catch (\Exception $pException) {
 			echo '[Modules] Exception occurred during instantiation of module "' . $sName . '": ';
 			echo $pException -> getMessage () . PHP_EOL;
 			
@@ -102,12 +102,12 @@ class ModuleManager extends Singleton implements ArrayAccess, SeekableIterator, 
 		
 		if (!($this -> m_aModules [$sName]['Instance'] instanceof ModuleBase))
 		{
-			throw new Exception ('The module "' . $sName . '" cannot be loaded: not a module.');
+			throw new \Exception ('The module "' . $sName . '" cannot be loaded: not a module.');
 			unset ($this -> m_aModules [$sName]);
 			return false ;
 		}
 		
-		$pClassObj = new ReflectionClass ($sName);
+		$pClassObj = new \ReflectionClass ($sName);
 		foreach ($pClassObj -> getMethods () as $pMethodObj)
 			$this -> m_aModules [$sName]['Methods'][$pMethodObj -> getName ()] = $pMethodObj;
 		
@@ -400,7 +400,7 @@ class ModuleManager extends Singleton implements ArrayAccess, SeekableIterator, 
 		}
 		
 		if (current ($this -> m_aModules) === false)
-			throw new OutOfBoundsException ('Cannot seek to position "' . $mIndex . '"');
+			throw new \OutOfBoundsException ('Cannot seek to position "' . $mIndex . '"');
 	}
 
 }
