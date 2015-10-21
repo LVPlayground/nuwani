@@ -5,8 +5,7 @@
 
 namespace Nuwani;
 
-interface ISecurityProvider
-{
+interface ISecurityProvider {
     /**
      * These define a list of default provider levels that will be
      * implemented in their own module. Using them name-based looks better
@@ -15,7 +14,6 @@ interface ISecurityProvider
      * 
      * @var integer
      */
-    
     const   CHANNEL_ALL     = 0;
     const   CHANNEL_VOICE       = 1;
     const   CHANNEL_HALFOP      = 2;
@@ -30,7 +28,6 @@ interface ISecurityProvider
      * 
      * @var integer
      */
-    
     const   BOT_OWNER       = 9999;
     
     /**
@@ -41,6 +38,5 @@ interface ISecurityProvider
      * @param integer $nSecurityLevel Related level of security.
      * @return boolean
      */
-    
     public function checkSecurity (Bot $pBot, $nSecurityLevel);
 };

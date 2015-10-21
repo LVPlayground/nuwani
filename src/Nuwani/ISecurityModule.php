@@ -5,8 +5,7 @@
 
 namespace Nuwani;
 
-interface ISecurityModule
-{
+interface ISecurityModule {
     /**
      * This function will register a new security provider with this very
      * module, as soon as it gets available. Will be called automatically.
@@ -14,7 +13,6 @@ interface ISecurityModule
      * @param ISecurityProvider The security provider to register with this module.
      * @param integer $nLevel Security level this provider will register.
      */
-    
     public function registerSecurityProvider (ISecurityProvider $pProvider, $nLevel);
     
     /**
@@ -23,6 +21,5 @@ interface ISecurityModule
      * 
      * @param ISecurityProvider $pProvider Security Provider that is being unloaded.
      */
-    
     public function unregisterSecurityProvider (ISecurityProvider $pProvider);
-}
+};
