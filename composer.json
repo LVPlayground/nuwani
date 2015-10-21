@@ -1,0 +1,27 @@
+{
+    "name": "LVPlayground/nuwani",
+    "description": "Modular framework for PHP-based IRC bots.",
+    "require": {
+        "php": "^5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Beverloo",
+            "email": "peter@sa-mp.nl"
+        },
+        {
+            "name": "Dik Grapendaal",
+            "email": "dik@sa-mp.nl"
+        },
+        {
+            "name": "Russell Krupke",
+            "email": "russell@sa-mp.nl"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Nuwani": "src/"
+        }
+    }
+}
