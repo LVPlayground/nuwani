@@ -1,6 +1,7 @@
 {
     "name": "LVPlayground/nuwani",
     "description": "Modular framework for PHP-based IRC bots.",
+    "version": "3.0.0",
     "require": {
         "php": "^5.5"
     },
