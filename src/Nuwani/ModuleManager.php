@@ -70,11 +70,7 @@ class ModuleManager extends Singleton implements \ArrayAccess, \SeekableIterator
 			$sPath .= '.php';
 		}
 		
-		if (file_exists ($sPath) && class_exists ($sName) && function_exists ('runkit_import'))
-		{
-			runkit_import ($sPath,  RUNKIT_IMPORT_OVERRIDE | RUNKIT_IMPORT_CLASSES);
-		}
-		else if (!class_exists ($sName) && file_exists ($sPath))
+		if (!class_exists ($sName) && file_exists ($sPath))
 		{
 			include_once $sPath;
 		}
