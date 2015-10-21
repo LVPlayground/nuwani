@@ -1,13 +1,7 @@
 <?php
-/**
- * Nuwani-v2 Bot Framework
- *
- * This file is part of the Nuwani v2 Bot Framework, a simple set of PHP classes
- * which allow you to set-up and run your own bot. It features advanced,
- * PHP 5.3 based syntax for optimal performance and security.
- *
- * @author Peter Beverloo <peter@lvp-media.com>
- */
+// Copyright 2008-2015 Las Venturas Playground. All rights reserved.
+// Use of this source code is governed by the MIT license, a copy of which can
+// be found in the LICENSE file.
 
 namespace Nuwani;
 
@@ -50,5 +44,3 @@ class Configuration extends Singleton
 		return array ();
 	}
 };
-
-?>
